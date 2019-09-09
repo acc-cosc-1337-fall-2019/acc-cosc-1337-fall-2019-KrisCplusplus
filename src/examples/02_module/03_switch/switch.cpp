@@ -9,3 +9,19 @@
 //returns 'Option 4' when value 4
 //return 'Invalid Option' otherwise
 
+string menu(int menu_option)
+{
+	switch (menu_option)
+	{
+	case 1:
+		return "option 1";
+	case 2:
+		return "option 2";
+	case 3:
+		return "option 3";
+	case 4:
+		return "option 4";
+	default:
+		return "invalid";
+	}
+}
