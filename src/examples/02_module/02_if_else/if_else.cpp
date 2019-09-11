@@ -32,7 +32,7 @@ string get_generation(int year)
 	{
 		return "Silent Generation";
 	}
-	else
+	else if
 	{
 		return "invalid Year";
 	}

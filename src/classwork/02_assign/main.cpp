@@ -1,13 +1,13 @@
 //Write the include statement for decisions.h here
-#include "descisions.h"
+#include "decisions.h"
 
 //Write include for capturing input from keyboard and displaying output to screen
 #include<iostream>
 
 
 //Write namespace using statements for cout and cin
-using std::cout;     using std::cin'
-'
+using std::cout;     using std::cin;
+
 int main() 
 {
 	//create a double variable named hours

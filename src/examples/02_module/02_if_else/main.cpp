@@ -10,7 +10,7 @@ using std::cin;
 Write code to capture year from keyboard.
 Pass the year to get_generation function and display function result.
 */
-int main() 
+int main();
 {
 	int year;
 	cout << "Enter year:"
@@ -20,4 +20,4 @@ int main()
 	cout << "Generation:" << generation;
 	
 	return 0;
-}
+ }

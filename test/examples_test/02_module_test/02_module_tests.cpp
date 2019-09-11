@@ -13,7 +13,7 @@ TEST_CASE("Test is even_function")
 	REQUIRE(is_even(3) == false);
 }
 
-TEST_CASE (" Test get generation")
+TEST_CASE(" Test get generation")
 { REQUIRE(get_generation(2000) == "Centenial"); 
   REQUIRE(get_generation(1990) == "Millenial");
   REQUIRE(get_generation(1975) == "Generation X");
