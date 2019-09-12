@@ -12,23 +12,35 @@
 
 string get_generation(int year)
 {
-	if (year >= 1996 && year <= 2014)
+	if (year >= 1996 && year =< 2014)
 	{
 		return "Centenial";
 	}
-	else if (year >= 1977 && <= 1995)
+	else
+	{
+		if (year >= 1977 && =< 1995)
+	}
 	{
 		return "Millenial";
 	}
-	else if (year >= 1965 && <= 1976)
+	else
 	{
-		return "Generation X";
+		if (year >= 1965 && =< 1976)
 	}
-	else if (year >= 1946 && <= 1964)
+	{
+	    return "Generation X";
+	}
+	else 
+	{
+	   if (year >= 1946 && =< 1964)
+    }
+	    
 	{
 		return "Baby boomer";
 	}
-	else if (year >= 1925 && <= 1945)
+	else 
+	
+	   if (year >= 1925 && =< 1945)
 	{
 		return "Silent Generation";
 	}
