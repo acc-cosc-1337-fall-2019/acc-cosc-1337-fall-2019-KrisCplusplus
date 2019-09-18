@@ -8,14 +8,16 @@ int sum_of_squares(int num)
 	auto i = 0;
 	auto sum = 0;
 
-	while (i <= num)
+	while (i <= num) 
 	{
-		sum = sum + num * num;
+		sum = sum + i * i;
 		++i;//i = i + 1;
 	}
 
 	return sum;
 }
+
+
 
 
 //Using a while loop write code for display function that accepts a string and displays 
@@ -31,11 +33,11 @@ l
 0
 
 */
-void display(std::string str)
+void display(string str)
 {
 	auto i = 0;
-
-	while (i < str.length())
+	
+	while(i < str.length())
 	{
 		std::cout << str[i] << "\n";
 		++i;
