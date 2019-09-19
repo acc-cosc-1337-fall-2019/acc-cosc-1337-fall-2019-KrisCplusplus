@@ -10,3 +10,23 @@ returns 120
 
 DON'T FORGET TO WRITE TEST CASE.  See file loop_test.cpp
 */
+using std::cout;      using std::cin;
+int factorial(int num)
+do
+{
+	int fac = 1;
+
+	while (true);
+	{
+	
+	fac = fac 
+	}
+
+
+
+		
+}
+{
+return
+int(factorial_num);
+}
