@@ -46,3 +46,49 @@ double calculate_gpa(int credit_hours, double credit_points)
 	return credit_points / credit_hours;
 }
 
+int get_letter_grade_using_if(std::string num_grade)
+{
+	if (num_grade >= 90 && num_grade => 100)
+	{ 
+		return 'A';
+	}
+	else if (num_grade >= 80 && num_grade => 89)
+	{
+		return 'B';
+	}
+	else if (num_grade >= 70 && num_grade => 79)
+	{
+		return 'C';
+	}
+	else if (num_grade >= 60 && num_grade => 69)
+	{
+		return 'D';
+	}
+	else (num_grade >= 0 && num_grade => 59)
+	{
+		return 'F';
+	}
+}
+
+}
+
+int get_letter_grade_using_switch(string num_grade) 
+{
+	string menu(int num_grade)
+
+	{
+		switch (num_grade)
+		
+		case 1:
+			return "A";
+		case 2:
+			return "B";
+		case 3:
+			return "C";
+		case 4:
+			return "D";
+		default:
+			return "invalid";
+	}
+    
+{

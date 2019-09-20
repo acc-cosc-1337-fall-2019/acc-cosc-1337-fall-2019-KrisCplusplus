@@ -53,6 +53,15 @@ int main()
 
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
 	cout << "GPA: " << gpa;
+	
+	string num_grade;
+	int num_grade = 0;
+
+	cout << "enter numeric grade: ";
+	cin >> num_grade;
+	int get_letter_grade_using_if(std::string num_grade);
+	int get_letter_grade_using_switch(std::string num_grade);
+
 
 	return 0;
 }

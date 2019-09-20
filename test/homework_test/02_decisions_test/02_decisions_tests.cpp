@@ -9,3 +9,10 @@ TEST_CASE("Verify Test Configuration", "verification")
 	REQUIRE(calculate_gpa);
 }
 
+TEST_CASE("Value for numerical grade")
+{
+	REQUIRE(true == true);
+	REQUIRE(get_letter_grade_using_if);
+	REQUIRE(get_letter_grade_using_switch);
+}
+
