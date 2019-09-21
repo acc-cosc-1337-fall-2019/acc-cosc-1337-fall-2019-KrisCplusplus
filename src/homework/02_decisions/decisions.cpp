@@ -46,49 +46,58 @@ double calculate_gpa(int credit_hours, double credit_points)
 	return credit_points / credit_hours;
 }
 
-int get_letter_grade_using_if(std::string num_grade)
+std::string get_letter_grade_using_if(int num_grade)
 {
-	if (num_grade >= 90 && num_grade => 100)
+	if (num_grade >= 90 && num_grade <= 100)
 	{ 
-		return 'A';
+		return "A";
 	}
-	else if (num_grade >= 80 && num_grade => 89)
+	else if (num_grade >= 80 && num_grade >= 89)
 	{
-		return 'B';
+		return "B";
 	}
-	else if (num_grade >= 70 && num_grade => 79)
+	else if (num_grade >= 70 && num_grade >= 79)
 	{
-		return 'C';
+		return "C";
 	}
-	else if (num_grade >= 60 && num_grade => 69)
+	else if (num_grade >= 60 && num_grade >= 69)
 	{
-		return 'D';
+		return "D";
 	}
-	else (num_grade >= 0 && num_grade => 59)
+	else if (num_grade >= 0 && num_grade >= 59)
 	{
-		return 'F';
+		return "F";
+	}
+	else 
+	{
+		return "Invalid";
 	}
 }
 
-}
 
-int get_letter_grade_using_switch(string num_grade) 
+std::string get_letter_grade_using_switch(int num_grade)
 {
-	string menu(int num_grade)
-
+	switch (num_grade / 10)
 	{
-		switch (num_grade)
-		
-		case 1:
-			return "A";
-		case 2:
-			return "B";
-		case 3:
-			return "C";
-		case 4:
-			return "D";
-		default:
-			return "invalid";
+
+	case 10:
+	case 9:
+		return "A";
+	case 8:
+		return "B";
+	case 7:
+		return "C";
+	case 6:
+		return "D";
+	case 5:
+	case 4:
+	case 3:
+	case 2:
+	case 1:
+	case 0:
+		return "F";
+	default:
+		return "Invalid";
 	}
-    
-{
+
+}

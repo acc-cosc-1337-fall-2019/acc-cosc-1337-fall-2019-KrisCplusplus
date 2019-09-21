@@ -5,14 +5,22 @@
 TEST_CASE("Verify Test Configuration", "verification") 
 {
 	REQUIRE(true == true);
-	REQUIRE(get_grade_points);
-	REQUIRE(calculate_gpa);
 }
 
-TEST_CASE("Value for numerical grade")
+TEST_CASE("Test get grade points")
 {
-	REQUIRE(true == true);
-	REQUIRE(get_letter_grade_using_if);
-	REQUIRE(get_letter_grade_using_switch);
+	REQUIRE(get_grade_points("A") == 4);
+	REQUIRE(get_grade_points("B") == 3);
+	REQUIRE(get_grade_points("C") == 2);
+	REQUIRE(get_grade_points("D") == 1);
+	REQUIRE(get_grade_points("F") == 0);
+	REQUIRE(get_grade_points("G") == -1);
 }
 
+TEST_CASE("Test calculate gpa")
+{
+	REQUIRE(calculate_gpa(12, 45) == 3.75);
+	REQUIRE(calculate_gpa(120, 390) == 3.25);
+	REQUIRE(calculate_gpa(90, 180) == 2);
+	REQUIRE(calculate_gpa(12, -1) == -1);
+}
