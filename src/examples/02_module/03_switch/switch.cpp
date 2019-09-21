@@ -11,17 +11,18 @@
 
 string menu(int menu_option)
 {
-	switch (menu_option)
+	switch (menu_option) 
 	{
 	case 1:
-		return "option 1";
+		return "Option 1";
 	case 2:
-		return "option 2";
+		return "Option 2";
 	case 3:
-		return "option 3";
+		return "Option 3";
 	case 4:
-		return "option 4";
+		return "Option 4";
 	default:
-		return "invalid";
+		return "Invalid";
 	}
+	
 }

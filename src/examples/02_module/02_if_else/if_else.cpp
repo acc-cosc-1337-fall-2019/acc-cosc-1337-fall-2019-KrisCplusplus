@@ -22,18 +22,19 @@ string get_generation(int year)
 	}
 	else if (year >= 1965 && year <= 1976)
 	{
-	    return "Generation X";
+		return "Generation X";
 	}
 	else if (year >= 1946 && year <= 1964)
 	{
-		return "Baby boomer";
+		return "Baby Boomer";
 	}
 	else if (year >= 1925 && year <= 1945)
 	{
 		return "Silent Generation";
 	}
-	else
+	else 
 	{
-		return "invalid";
+		return "Invalid";
 	}
+	
 }
