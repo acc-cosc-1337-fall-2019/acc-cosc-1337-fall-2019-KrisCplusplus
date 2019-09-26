@@ -23,10 +23,14 @@ void loop_vector_w_index_const(const std::vector<int>& nums);
 Write function prototype for function loop_vector_w_index with a vector of int const pass by reference parameter.
 */
 
+void loop_vector_w_index_ref_const(std::vector<int>& nums);
+
 /*
 Iterate vector with a for ranged loop (use auto)
 */
-void loop_vector_w_for_ranged(const std::vector<int>& nums);
+void loop_vector_w_for_ranged(std::vector<int>& nums);
+
+void loop_vector_w_for_ranged_ref_var(std::vector<int>& nums);
 
 
 
