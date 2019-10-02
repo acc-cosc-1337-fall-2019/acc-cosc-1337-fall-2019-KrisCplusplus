@@ -9,8 +9,22 @@ Return quotient.
 
 void get_gc_content(const std::string)
 {
-
+	void loop_string_w_auto(std::string str,
+		std::string &str1)
+	{
+		//not modifiable
+		for (auto ch : str)
+		{
+			std::cout << ch << "\n";
+			ch = 'A';
+			ch = 'T';
+			ch = 'C';
+			ch = 'G';
+		}
+		return double;
+	
 }
+return quotient;
      
 
 /*
@@ -19,6 +33,10 @@ accepts a string parameter and returns a string reversed.
 */
 
 void get_reverse_string(std::string)
+{
+
+}
+   return 
 
 /*
 Write prototype for function get_dna_complement that
@@ -32,3 +50,6 @@ c. return string
 */
 
 void get_dna_compliment(std::string)
+{
+
+}
