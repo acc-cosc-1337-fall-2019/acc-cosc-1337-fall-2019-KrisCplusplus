@@ -1,6 +1,6 @@
 #include "bank_account.h"
 //bank_account.cpp
-BankAccount::BankAccount()
+BankAccount::BankAccount() //constructor
 {
 	//code to read balance from database
 	balance = 500;
@@ -12,4 +12,19 @@ void BankAccount::deposit(int amount)
 	{
 		balance += amount;
 	}
+}
+
+void BankAccount::withdraw(int amount)
+{
+	{
+		if (balance > amount)
+		{
+			balance -= amount;
+		}
+	}
+}
+
+int get_balance() const
+{
+	return balance;
 }
