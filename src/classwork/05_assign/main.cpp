@@ -18,7 +18,7 @@ Iterate the vector and display the Area for each Rectangle on one line and the t
 */
 int main()
 {
-	vector<Rectangle> rectangles;
+	vector<Rectanglee> rectangles;
 	rectangles.push_back(Rectangle(4, 5));
 	rectangles.push_back(Rectangle(10, 10));
 	rectangles.push_back(Rectangle(100, 10));
