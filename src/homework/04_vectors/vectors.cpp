@@ -13,10 +13,10 @@ vector of intsparameter that returns the max value in a vector
 
 int get_max_int_from_vector(std::vector<int>) const&
 {
-	vector<int> nums = [i] const
+	vector<int> nums = [i] const;
 		std::cout << nums[i] << "\n";
 		
-		return max_value
+	return max_value;
 
 }
 

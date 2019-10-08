@@ -16,12 +16,12 @@ Program continues until user decides to exit.
 */
 int main() 
 {
-	Prompt user : vector nums = [i]
+	"Prompt user" : vector nums = [i]
 
 		if nums = (1)
 			return (get_max_int_from_vector("Get Max"));
 
-		else
+		else:
 		{
 			if nums = (2)
 				return (vector_of_primes("Get Primes"));
@@ -30,10 +30,11 @@ int main()
 	if get_max_int_from_vector
 		return max_value;
 
-	else
+	else:
+	{
 		if vector_of_primes
 			return vector_of_primes;
-
+	}
 
 	return 0;
 }
