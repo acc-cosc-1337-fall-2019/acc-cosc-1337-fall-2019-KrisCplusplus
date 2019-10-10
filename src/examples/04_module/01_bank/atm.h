@@ -10,7 +10,7 @@ public:
 	void deposit(int amount);
 	void withdraw(int amount);
 	void display_balance() const; //const = doesn't change
-
+	
 private:
 	BankAccount account;
 };

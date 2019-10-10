@@ -9,12 +9,14 @@ namespace acc {
 	public:
 		acc::Rectangle(int w, int h) : width(w), height(h) { calculate_area(); };
 		int get_area()const;
-
+		friend std::ostream & operator << (std::ostream & out,
+			const Rectangle &b);
 	private:
 		void calculate_area();
 		int height;
 		int width;
 		int area;
+		
 
 	};
 }
