@@ -16,6 +16,7 @@ void TicTacToe::start_game(string player)
 	next_player = player;
 	clear_board();
 }
+
 /*
 Remember position is what user sees. When you say position to vector subtract 1 from position.
 */
@@ -25,14 +26,17 @@ void TicTacToe::mark_board(int position)
 	set_next_player();
 
 }
+
 string TicTacToe::get_player() const
 {
 	return next_player;
 }
+
 void TicTacToe::display_board() const
 {
 	std::cout << "Board: " << display_board << "\n";
 }
+
 /*
 Remember position is what user sees. When you say position to vector subtract 1 from position.
 */
