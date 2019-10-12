@@ -58,96 +58,33 @@ bool TicTacToe::check_column_win()
 	    }
     }
 
-	return false;
-
-	{
-		for (std::size_t i = 0; i < 1; i++)
-		{
-			if (pegs[i] == pegs[i + 1] && pegs[i + 1] pegs[i + 4] && pegs[i + 4] && pegs[i + 7] && pegs[i + 7] != " ")
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-	
-	{
-		for (std::size_t i = 0; i < 2; i++)
-		{
-			if (pegs[i] == pegs[i + 2] && pegs[i + 2] pegs[i + 5] && pegs[i + 5] && pegs[i + 8] && pegs[i + 8] != " ")
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
 }
 
 bool TicTacToe::check_row_win()
 {
+	for (std::size_t i = 0; i < 1; i++)
 	{
-		for (std::size_t i = 0; i < 1; i++)
+		if (pegs[i] == pegs[i + 1] && pegs[i + 1] pegs[i + 2] && pegs[i + 2] != " ")
 		{
-			if (pegs[i] == pegs[i + 1] && pegs[i + 1] pegs[i + 2] && pegs[i + 2] != " ")
-			{
-				return true;
-			}
+			return true;
 		}
-
-		return false;
 	}
 
-	{
-		for (std::size_t i = 0; i < 3; i++)
-		{
-			if (pegs[i] == pegs[i + 3] && pegs[i + 3] pegs[i + 4] && pegs[i + 4] pegs[i + 5] && pegs[i + 5] != " ")
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	{
-		for (std::size_t i = 0; i < 6; i++)
-		{
-			if (pegs[i] == pegs[i + 6] && pegs[i + 6] pegs[i + 7] && pegs[i + 7] pegs[i + 8] && pegs[i + 8] != " ")
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
+	return false;
 }
 
 bool TicTacToe::check_diagonal_win()
 {
+	for (std::size_t i = 0; i < 4; i++)
 	{
-		for (std::size_t i = 0; i < 4; i++)
+		if (pegs[i] == pegs[i + 4] && pegs[i + 4] pegs[i + 8] && pegs[i + 8] != " ")
 		{
-			if (pegs[i] == pegs[i + 4] && pegs[i + 4] pegs[i + 8] && pegs[i + 8] != " ")
-			{
-				return true;
-			}
+			return true;
 		}
-
-		return false;
 	}
 
-	{
-		for (std::size_t i = 0; i < 2; i++)
-		{
-			if (pegs[i] == pegs[i + 2] && pegs[i + 2] pegs[i + 4] && pegs[i + 4] pegs[i + 6] && pegs[i + 6] != " ")
-			{
-				return true;
-			}
-		}
+	return false;
 
-		return false;
 }
 
 void TicTacToe::clear_board()
@@ -157,15 +94,14 @@ void TicTacToe::clear_board()
 
 bool TicTacToe::check_board_full()
 {
+	for (std::size_t i = 0; i < 1; i++)
 	{
-		for (std::size_t i = 0; i < 1; i++)
+		if (pegs[i] == pegs[i + 2] && pegs[i + 2] pegs[i + 4] && pegs[i + 4] pegs[i + 6] && pegs[i + 6] 
+			pegs[i + 5] && pegs[i + 5] && pegs[i + 8] && pegs[i + 8] pegs[i + 7] && pegs[i + 7] pegs[i + 3] && pegs[i + 3]  pegs[i + 1] && pegs[i + 1] != " ")
 		{
-			if (pegs[i] == pegs[i + 2] && pegs[i + 2] pegs[i + 4] && pegs[i + 4] pegs[i + 6] && pegs[i + 6] 
-				pegs[i + 5] && pegs[i + 5] && pegs[i + 8] && pegs[i + 8] pegs[i + 7] && pegs[i + 7] pegs[i + 3] && pegs[i + 3]  pegs[i + 1] && pegs[i + 1] != " ")
-			{
-				return true;
-			}
+			return true;
 		}
+	}
 
-		return false;
+	return false;
 }
