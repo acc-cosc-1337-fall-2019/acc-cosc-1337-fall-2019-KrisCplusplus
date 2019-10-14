@@ -7,24 +7,24 @@ Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
 
-void get_gc_content(const std::string)
+double get_gc_content(const std::string& dna)
 {
-	void loop_string_w_auto(std::string str,
-		std::string &str1)
+	int count = 0;
+	double gc_content = 0;
+
+	for (auto ch : dna)
 	{
-		//not modifiable
-		for (auto ch : str)
+		if (ch == 'C' || ch == 'c') || ch == 'G' || ch == 'g')
 		{
-			std::cout << ch << "\n";
-			ch = 'A';
-			ch = 'T';
-			ch = 'C';
-			ch = 'G';
-		}
-		return double;
+		count += 1;
+        }
+	}
+
+	gc_content = dna.size() / count;
 	
+	return gc_content;
 }
-return quotient;
+
      
 
 /*
