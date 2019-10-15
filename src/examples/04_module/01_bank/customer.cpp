@@ -1,6 +1,6 @@
 //customer.cpp
-
-void add_account(BankAccount act)
+#include "customer.h"
+void add_account(BankAccount act);
 {
 	total_balance += act.get_balance();
 	accounts.push_back(act);
@@ -19,4 +19,8 @@ ostream& operator<<(ostream& out, const Customer& c);
 	out << "\n Total Balance: " << c.total_balance;
 
 	return out;
+}
+
+void add_account(BankAccount act)
+{
 }

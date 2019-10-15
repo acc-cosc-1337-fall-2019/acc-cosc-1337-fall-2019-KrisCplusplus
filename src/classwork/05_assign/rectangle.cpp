@@ -17,7 +17,7 @@ int acc::Rectangle::get_area() const
 	return area;
 }
 
-std::ostream & acc::operator << (std::ostream & out, const Rectangle & b)
+std::ostream & acc::operator << (std::ostream & out, const Rectangle & b);
 {
 	out << "Area: " << b.area << '\n';
 

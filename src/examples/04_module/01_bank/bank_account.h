@@ -13,7 +13,9 @@ public:
 	friend void display(const BankAccount& account);
 	friend std::ostream & operator << (std::ostream & out,
 		const BankAccount & b);
-private:
+	friend std::istream & operator >> (std::istream & in, BankAccount &);
+protected:
+	
 	int balance;
 };
 #endif

@@ -25,7 +25,7 @@ void BankAccount::withdraw(int amount)
 	}
 }
 
-int get_balance() const
+int get_balance() const;
 {
 	return balance;
 }
@@ -37,7 +37,7 @@ void display(const BankAccount& account)
 
 std::ostream & operator << (std::ostream & out, const BankAccount & b)
 {
-	out << "Balance: " << b.balance << "\n"
+	out << "Balance: " << b.balance << "\n";
 
 		return out;
 }
@@ -45,9 +45,9 @@ std::ostream & operator << (std::ostream & out, const BankAccount & b)
 std::istream & operator >> (std::istream & in, BankAccount & b)
 {
 	std::cout << "\nEnter amount: ";
-	in >> amt;
+	in >> b;
 
-	b.deposit(amt);
+	b.deposit(b);
 
 	return in;
 }
