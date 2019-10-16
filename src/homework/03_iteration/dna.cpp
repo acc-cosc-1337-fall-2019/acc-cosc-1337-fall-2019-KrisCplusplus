@@ -9,34 +9,39 @@ Return quotient.
 
 double get_gc_content(const std::string& dna)
 {
-	int count = 0;
+	double count = 0;
 	double gc_content = 0;
 
 	for (auto ch : dna)
 	{
-		if (ch == 'C' || ch == 'c') || ch == 'G' || ch == 'g')
+		if (ch == 'C' || ch == 'c' || ch == 'G' || ch == 'g')
 		{
 		count += 1;
         }
 	}
 
-	gc_content = dna.size() / count;
+	gc_content = count / dna.size();
 	
 	return gc_content;
 }
 
-     
 
 /*
 Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
 
-void get_reverse_string(std::string)
+std::string get_reverse_string(std::string dna)
 {
+	std::string reverse;
 
+	for (std::size_t i = dna.size() - 1; i != -1; --i)
+	{
+		reverse.push_back(dna[i]);
+	}
+
+	return reverse;
 }
-   return 
 
 /*
 Write prototype for function get_dna_complement that
@@ -49,7 +54,29 @@ c. return string
 
 */
 
-void get_dna_compliment(std::string)
+std::string get_dna_compliment(std::string dna)
 {
+	std::string compliment = get_reverse_string(dna);
 
+	for (auto& ch : compliment)
+	{
+		if (ch == 'A' || ch == 'a')
+		{
+			ch = 'T';
+		}
+		else if (ch == 'T' || ch == 't')
+		{
+			ch = 'A';
+		}
+		else if (ch == 'C' || ch == 'c')
+		{
+			ch = 'G';
+		}
+		else if (ch == 'G' || ch == 'g')
+		{
+			ch = 'C';
+		}
+	}
+	
+	return compliment;
 }
