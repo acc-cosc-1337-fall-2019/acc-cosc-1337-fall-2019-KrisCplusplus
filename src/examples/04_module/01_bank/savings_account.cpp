@@ -1,4 +1,5 @@
 #include "savings_account.h"
+#include "savings_account.h"
 
 //savings_account.cpp
 
@@ -12,5 +13,6 @@ int SavingsAccount::get_balance() const
 {
 	double interest = balance * interest_rate * time;
 
-	return interest + balance
+	return interest + balance;
 }
+
