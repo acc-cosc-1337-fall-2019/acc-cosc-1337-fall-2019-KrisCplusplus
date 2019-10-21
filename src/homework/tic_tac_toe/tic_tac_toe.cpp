@@ -1,13 +1,17 @@
 //cpp
+#include<iostream>
 #include "tic_tac_toe.h"
+
+using std::cout;
 
 bool TicTacToe::game_over()
 {
-	if (check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
+	if (check_column_win() || check_row_win() ||
+		check_diagonal_win() || check_board_full()) 
 	{
 		return true;
 	}
-	
+
 	return false;
 }
 
@@ -18,13 +22,13 @@ void TicTacToe::start_game(string player)
 }
 
 /*
-Remember position is what user sees. When you say position to vector subtract 1 from position.
+Remember position is what user sees.
+When you save position to vector subtract 1 from position
 */
 void TicTacToe::mark_board(int position)
 {
 	pegs[position - 1] = next_player;
 	set_next_player();
-
 }
 
 string TicTacToe::get_player() const
@@ -32,24 +36,35 @@ string TicTacToe::get_player() const
 	return next_player;
 }
 
-void TicTacToe::display_board() const
+ostream& operator<<(ostream& out, const TicTacToe& t)
 {
-	for (std::size_t i = 0; i < 9; i += 3) 
+	
+	for (std::size_t i = 0; i < 9; i += 3)
 	{
-		cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n";
+		out << t.pegs[i] << "|" << t.pegs[i + 1] << "|" << t.pegs[i + 2]<<'\n';
 	}
+
+	return out;
 }
 
-/*
-Remember position is what user sees. When you say position to vector subtract 1 from position.
-*/
+istream& operator>>(istream& in, TicTacToe& t)
+{
+	int position;
+
+	std::cout << "Enter position from 1 to 9: ";
+	in >> position;
+	t.mark_board(position);
+
+	return in;
+}
+
 void TicTacToe::set_next_player()
 {
-	if (next_player == "X")
+	if (next_player == "X") 
 	{
 		next_player = "O";
 	}
-	else
+	else 
 	{
 		next_player = "X";
 	}
@@ -57,23 +72,23 @@ void TicTacToe::set_next_player()
 
 bool TicTacToe::check_column_win()
 {
-	for (std::size_t i = 0; i < 3; i++)
+	for (std::size_t i = 0; i < 3; i++) 
 	{
-		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && pegs[i + 6] != " ")
+		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6]
+			&& pegs[i + 6] != " ")
 		{
 			return true;
-	    }
-    }
+		}
+	}
 
 	return false;
-
 }
 
 bool TicTacToe::check_row_win()
 {
-	for (std::size_t i = 0; i < 9; i += 3)
+	for (std::size_t i = 0; i < 9; i += 3) 
 	{
-		if (pegs[i] == pegs[i + 1] && pegs[i + 1] == pegs[i + 2] && pegs[i + 2] != " ")
+		if(pegs[i] == pegs[i+1] && pegs [i+1] == pegs[i+2] && pegs[i] != " ")
 		{
 			return true;
 		}
@@ -84,23 +99,18 @@ bool TicTacToe::check_row_win()
 
 bool TicTacToe::check_diagonal_win()
 {
-	if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[8] != " ")
-	{
-		return true;
-	}
-
-	if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[6] != " ")
+	if(pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[0] != " " ||
+	   pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[2] != " ")
 	{
 		return true;
 	}
 
 	return false;
-
 }
 
 void TicTacToe::clear_board()
 {
-	for (auto& peg : pegs) 
+	for(auto& peg: pegs)
 	{
 		peg = " ";
 	}
@@ -108,9 +118,9 @@ void TicTacToe::clear_board()
 
 bool TicTacToe::check_board_full()
 {
-	for (std::size_t i = 0; i < 9; i++)
+	for(auto peg: pegs)
 	{
-		if (pegs[i] == " ") 
+		if(peg == " ")
 		{
 			return false;
 		}
